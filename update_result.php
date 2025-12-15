@@ -1,27 +1,10 @@
-<html>
-    <head>
-    	 
-    	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
-    </head>
-    
-    <body>
-       
-
-
 <?php
 
 	$id = $_GET["id"];
 
-	$address = $_GET["address"];
+	$name = $_GET["name"];
 
-	$road_number = $_GET["road_number"];
-
-	$city = $_GET["city"];
-
-	$quantity = $_GET["quantity"];
-
-	$amount = $_GET["amount"];
-
+	$location = $_GET["location"];
 
 
 
@@ -33,7 +16,7 @@
 
 
 
-	$query 	= "UPDATE order_details SET address='$address', road_number='$road_number', city='$city', quantity='$quantity', amount='$amount'  WHERE id = $id";
+	$query 	= "UPDATE pharmacy SET name='$name', location='$location' WHERE id = '$id'";
 
 	echo $query;
 
@@ -45,10 +28,10 @@
 
 
 
-	echo "<p>Record updated:<br> Address = $address <br> Road_Number = $road_number <br> City = $city <br> Quantity = $quantity <br> Amount = $amount";
+	echo "<p>Record updated:<br> Name = $name <br> Location = $location </p>";
 
 
 
-	echo "<p><a href=read.php><button class= 'ui primary button'>READ all records</button></a></p>";
+	echo "<p><a href=read.php>READ all records</a></p>";
 
 ?>
