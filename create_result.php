@@ -1,10 +1,22 @@
+<html>
+    <head>
+    	 
+    	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    </head>
+    <body>
+
+
 <?php
 
-	$name = $_GET["NAME"];
+	$address = $_GET["ADDRESS"];
 
-	$salary = $_GET["SALARY"];
+	$road_number = $_GET["ROAD_NUMBER"];
 
-	$shift= $_GET["SHIFT"];
+	$city= $_GET["CITY"];
+
+	$quantity= $_GET["QUANTITY"];
+
+	$amount= $_GET["AMOUNT"];
 
 	require_once('db_connect.php');
 
@@ -14,16 +26,16 @@
 
 
 
-	mysqli_query( $connect, "INSERT INTO employees VALUES ( NULL, '$name', $salary, '$shift' )" )
+	mysqli_query( $connect, "INSERT INTO order_details VALUES ( NULL, '$address', '$road_number', '$city', '$quantity', '$amount' )" )
 
 		or die("Can not execute query");
 
 
 
-	echo "Record inserted:<br> Name = $name <br> Salary = $salary<br> Shift = $shift";
+	echo "Record inserted:<br> Address = $address <br> Road_Number = $road_number <br> City = $city <br> Quantity = $quantity <br> Amount = $amount";
 
 
 
-	echo "<p><a href=read.php>READ all records</a>";
+	echo "<p><a href=read.php><button class= 'ui primary button'>READ all records</button></a></p>";
 
 ?>

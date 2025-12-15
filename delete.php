@@ -1,3 +1,12 @@
+<html>
+    <head>
+    	 
+    	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    </head>
+    
+    <body>
+       
+
 <?php
 
 	$id = $_GET["id"];
@@ -12,7 +21,7 @@
 
 
 
-	mysqli_query( $connect, "DELETE FROM employees WHERE ID=$id" )
+	mysqli_query( $connect, "DELETE FROM order_details WHERE ID=$id" )
 
 		or die("Can not execute query");
 
@@ -22,6 +31,6 @@
 
 
 
-	echo "<p><a href=read.php>READ all records</a>";
+	echo "<p><a href=read.php><button class= 'ui primary button'>READ all records</button></a></p>";
 
 ?>

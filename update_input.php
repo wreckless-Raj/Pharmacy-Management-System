@@ -1,12 +1,25 @@
+<html>
+    <head>
+    	 
+    	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    </head>
+    
+    <body>
+       
+
 <?php
 
 	$id = $_GET["id"];
 
-	$name = $_GET["name"];
+	$address = $_GET["address"];
 
-	$salary = $_GET["salary"];
+	$road_number = $_GET["road_number"];
 
-	$shift = $_GET["shift"];
+	$city = $_GET["city"];
+
+	$quantity = $_GET["quantity"];
+
+	$amount = $_GET["amount"];
 	
 	
 
@@ -22,17 +35,25 @@
 
 
 
-	<input type=hidden name=id value='<?php echo $id; ?>'> <br>
+	<input type=hidden name=id value='<?php echo $id; ?>'> <br> <br>
 
 
 
-	Name: <input type=text name="name" value='<?php echo $name; ?>'>
+	Address: <input type=text name="address" value='<?php echo $address; ?>'> <br> <br>
 
 	<p>
 
-	Salary: <input type=text name="salary" value='<?php echo $salary; ?>'>
+	Road_Number: <input type=text name="road_number" value='<?php echo $road_number; ?>'> <br> <br>
 
-	Shift: <input type=text name="shift" value='<?php echo $shift; ?>'>
+	City: <input type=text name="city" value='<?php echo $city; ?>'> <br>
+
+	<p>
+
+	Quantity: <input type=text name="quantity" value='<?php echo $quantity; ?>'> <br>
+
+	<p>
+
+	Amount: <input type=text name="amount" value='<?php echo $amount; ?>'>	<br> <br>
 
 	<p>
 
